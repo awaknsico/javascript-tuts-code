@@ -1,33 +1,49 @@
-var troll = prompt("You're walking through the forest, minding your own business, and you run into a troll! Do you FIGHT him, PAY him, or RUN?").toUpperCase();
-
-switch(troll) {
-  case 'FIGHT':
-    var strong = prompt("How courageous! Are you strong (YES or NO)?").toUpperCase();
-    var smart = prompt("Are you smart?").toUpperCase();
-    if(strong === 'YES' || smart === 'YES') {
-      alert("You only need one of the two! You beat the troll--nice work!");
-    } else {
-      alert("You're not strong OR smart? Well, if you were smarter, you probably wouldn't have tried to fight a troll. You lose!");
-    }
-    break;
-  case 'PAY':
-    var money = prompt("All right, we'll pay the troll. Do you have any money (YES or NO)?").toUpperCase();
-    var dollars = prompt("Is your money in Troll Dollars?").toUpperCase();
-    if(money === 'YES' && dollars === 'YES') {
-      alert("Great! You pay the troll and continue on your merry way.");
-    } else {
-      alert("Dang! This troll only takes Troll Dollars. You get whomped!");
-    }
-    break;
-  case 'RUN':
-    var fast = prompt("Let's book it! Are you fast (YES or NO)?").toUpperCase();
-    var headStart = prompt("Did you get a head start?").toUpperCase();
-    if(fast === 'YES' || headStart === 'YES') {
-      alert("You got away--barely! You live to stroll through the forest another day.");
-    } else {
-      alert("You're not fast and you didn't get a head start? You never had a chance! The troll eats you.");
-    }
-    break;
-  default:
-    alert("I didn't understand your choice. Hit Run and try again, this time picking FIGHT, PAY, or RUN!");
-}
+var user = prompt("You dey drive along Ikot Ekpene Road...\
+You discover say Ekelebe dey follow you for back...\
+And dem don signal say make you stop...Wetin you go do???\
+ STOP, SPEED, abi BRANCH!!!").toLowerCase();
+ 
+ switch(user){
+     
+     
+     case 'stop':
+         var particulars = prompt("You been don carry Vehicle Particulars? (Yes or No)").toLowerCase();
+         var license = prompt("Shey you get Drivers License?");
+         
+         if (particulars === "yes" || license === "yes"){
+             alert("You only need one of them sha...Dem don dey free you to go!");
+         }
+         else{
+             alert("Omo, you no get anything and you stop. Da, you don enter Case o.");
+         }
+         break;
+         
+     
+     case 'speed':
+         var drivingMora = prompt("Omo, you get driving mora? (Yes or No)");
+         var fuel = prompt("Shey you get enough fuel for tank?");
+         
+         if(drivingMora === "yes" && fuel === "yes"){
+             alert("Oh man, you don show dem mora...dem no see your break light again");
+         }
+         else{
+             alert("Why you no been consider say you no set to carry Ekelebe run. Dem don block you!");
+         }
+         break;
+         
+         
+     case 'branch':
+         var sabiArea = prompt("Shey you sabi the area you enter so? (Yes or No)");
+         var offRoad = prompt("Shey your car good for off-road movement?");
+         if (sabiArea === "yes" && offRoad === "yes"){
+             alert("Come see nkoro master o! Choi, them no even see your break light again");
+         }
+         else{
+             alert("Chai, you lucky die. Dem don almost bam you but you manage beat them");
+         }
+         break;
+         
+         
+     default:
+         alert("Which one be that one sef???");
+ }
